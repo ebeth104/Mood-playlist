@@ -2,13 +2,13 @@ from flask import Flask, render_template, request
 from functions import aggregate_top_artists, authenticate_spotif, aggregate_top_tracks, create_playlist, select_tracks, create_playlist
 import spotipy.util as util
 
-client_id = '6c1e24b937c248c59e6d4754603372f0'
-client_secret = '6f9833cbad264c49be921ca7be7cf90c'
-redirect_uri = 'http://localhost:5000'
+client_id = 'YOUR_CLIENT_ID'
+client_secret = 'YOUR_CLIENT_SECRET'
+redirect_uri = 'YOUR_REDIRECT_URI'
 
 scope = 'user-library-read user-top-read user-follow-read playlist-modify-public'
 
-username = "lily"
+username = "YOUR SPOTIFY USERNAME"
 token = util.prompt_for_user_token(username, scope, client_id, client_secret, redirect_uri)
 
 app = Flask(__name__)
