@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %} Mood Playlist {% endblock %}
+
+{% block main %}
+
+<h2>What is your mood now? (from a scale of 0.0 to 1.0) </h2>
+<form method ="POST" action="/mood">
+    <label for="mood">Mood</label>
+    <input type="text" name="mood"  />
+    <input type="submit" />
+</form>
+
+{% endblock %}
